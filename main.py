@@ -10,7 +10,7 @@ print("\n\n\nTHIS IS A BANKING APP PROTOTYPE")
 
 
 def prompt():
-    print("\n\n\nWould you like to make a transaction?")
+    print("\n\n\nWould you like to make a transaction? \n y=YES n=NO q=QUIT\n")
     transact = str(input())
     transact = transact.lower()
     startup(transact)
@@ -30,7 +30,7 @@ def startup(confirm):
         prompt()
 
 def transaction_option():
-    print("\nWould you like to make a deposit or withdrawal")
+    print("\nWould you like to make a deposit or withdrawal? \n d=Deposit w=Withdrawal q=QUIT\n")
     change = str(input(""))
     change = change.lower()
     if change == "deposit" or change == "d":

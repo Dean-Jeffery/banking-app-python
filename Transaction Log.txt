@@ -32,3 +32,8 @@ Old Balance: 0.0
 Transaction Amount: +1000.0
 Transaction Date and time Mon Jun  8 20:03:32 2020
 New Balance: 1000.0
+
+Old Balance: 1000.0
+Transaction Amount: +1.0
+Transaction Date and time Mon Jun  8 20:29:42 2020
+New Balance: 1001.0
