@@ -1,27 +1,16 @@
+# Imports
 import math
 import sys
 import datetime
+
+# Define variables
 x = datetime.datetime.now()
 
-print("THIS IS A BANKING APP PROTOTYPE")
+print("\n\n\nTHIS IS A BANKING APP PROTOTYPE")
 
-def addStartingBalance():
-    print("RESET STARTING BALANCE?")
-    addStart = str(input())
-    addStart = addStart.lower()
-    if addStart == "y" or addStart == "yes":
-        file = open("Bank Data.txt", "w")
-        file.write(str(100))
-    print("RESET OLD LOGS?")
-    erase = str(input())
-    erase = erase.lower()
-    if erase == "y" or erase == "yes":
-        file = open("Transaction Log.txt", "w")
-        file.write("START")
-    prompt()
 
 def prompt():
-    print("Would you like to make a transaction?")
+    print("\n\n\nWould you like to make a transaction?")
     transact = str(input())
     transact = transact.lower()
     startup(transact)
@@ -130,7 +119,7 @@ def transactionLogs(floatCurrent, transactionOccured, floatAddedAmount,newAmount
     updatedAmount = newAmount
     updatedAmount = str(newAmount)
     LOG.write("\n\nOld Balance: " + oldAmount)
-    LOG.write("\nTransaction Ammount: " + transactionType + transactionAmount)
+    LOG.write("\nTransaction Amount: " + transactionType + transactionAmount)
     LOG.write("\nTransaction Date and time")
     LOG.write(x.strftime(' %c'))
     LOG.write("\nNew Balance: " + updatedAmount)
