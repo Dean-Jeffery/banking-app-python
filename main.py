@@ -130,9 +130,9 @@ def transactionLogs(floatCurrent, transactionOccured, floatAddedAmount,newAmount
     updatedAmount = newAmount
     updatedAmount = str(newAmount)
     LOG.write("\n\nOld Balance: " + oldAmount)
-    LOG.write("\nTransaction Occured: " + transactionType + transactionAmount)
-    LOG.write("Date and time")
-    LOG.write(x.strftime('%c'))
+    LOG.write("\nTransaction Ammount: " + transactionType + transactionAmount)
+    LOG.write("\nTransaction Date and time")
+    LOG.write(x.strftime(' %c'))
     LOG.write("\nNew Balance: " + updatedAmount)
     
 
