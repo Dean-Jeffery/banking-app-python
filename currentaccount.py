@@ -4,8 +4,9 @@ import datetime
 
 x = datetime.datetime.now()
 
+
 def prompt():
-    print("\n\n\nWould you like to make a transaction? \n y=YES n=NO q=QUIT\n")
+    print("\n\n\nWould you like to make a transaction, view your statement or check balance? \n t=transaction s=statement b=balance q=QUIT\n")
     transact = str(input())
     transact = transact.lower()
     startup(transact)
@@ -13,8 +14,14 @@ def prompt():
 def startup(confirm):
     run = True
     while run:
-        if confirm == "yes" or confirm == "y":
+        if confirm == "transaction" or confirm == "t":
             transaction_option()
+        elif confirm == "statement" or confirm == "s":
+            checkLog()
+            prompt()
+        elif confirm == "balance" or confirm == "b":
+            checkBalance()
+            prompt()
         elif confirm == "no" or confirm == "n" or confirm == "quit" or confirm == "q":
             print("Exiting...")
             sys.exit()
@@ -43,7 +50,14 @@ def checkBalance():
     current = open("Current-BankData.txt", "r").read()
     floatCurrent = float(current)
     file.close()
-    
+
+def checkLog():
+    file = open("Current-TransactionLog.txt", "r")
+    print("Full transaction log")
+    print(file.read())
+    current = open("Current-TransactionLog.txt", "r").read()
+    file.close()
+
 def deposit_money():
     checkBalance()
     depositAction()
