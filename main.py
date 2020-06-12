@@ -6,6 +6,10 @@ import currentaccount
 import savingsaccount
 import csv
 
+# tikinter imports
+import tkinter as tk
+from tkinter import ttk
+
 
 # Define global variables
 x = datetime.datetime.now()
@@ -92,3 +96,6 @@ def startup(confirm):
             account()
     
 account()
+
+
+
