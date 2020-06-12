@@ -2,6 +2,10 @@ import math
 import sys
 import datetime
 
+# tkinter imports
+import tkinter as tk
+from tkinter import ttk
+
 x = datetime.datetime.now()
 
 def prompt():
@@ -53,7 +57,7 @@ def checkBalance():
 
 def checkLog():
     file = open("Savings-TransactionLog.txt", "r")
-    print("Full transaction log")
+    print("Full transaction")
     print(file.read())
     current = open("Savings-TransactionLog.txt", "r").read()
     file.close()
@@ -131,3 +135,27 @@ def transactionLogs(floatCurrent, transactionOccured, floatAddedAmount,newAmount
     LOG.write(x.strftime(' %c'))
     LOG.write("\nNew Balance: " + updatedAmount)
     
+
+
+# ###############################
+# tkinter
+
+# this runs instantly when main.py runs 
+
+# root = tk.Tk()
+
+
+
+# btnTransaction = ttk.Button(root, text="Make a transaction", command=transaction_option)
+# btnTransaction.pack()
+
+# btnStatement = ttk.Button(root, text="view statement", command=checkLog)
+# btnStatement.pack()
+
+# btnBalance = ttk.Button(root, text="view balance", command=checkBalance)
+# btnBalance.pack()
+
+
+
+
+# root.mainloop()

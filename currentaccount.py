@@ -2,6 +2,10 @@ import math
 import sys
 import datetime
 
+# tkinter imports
+import tkinter as tk
+from tkinter import ttk
+
 x = datetime.datetime.now()
 
 

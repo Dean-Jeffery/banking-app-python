@@ -26,3 +26,25 @@ btnGetanswer = ttk.Button(root, text="add", command=addition)
 btnGetanswer.pack()
 
 root.mainloop()
+
+
+# ###############################
+# tkinter
+
+root = tk.Tk()
+
+
+
+btnTransaction = ttk.Button(root, text="Submit", command=transaction_option)
+btnTransaction.pack()
+
+btnStatement = ttk.Button(root, text="Submit", command=checkLog)
+btnStatement.pack()
+
+btnBalance = ttk.Button(root, text="Submit", command=checkBalance)
+btnBalance.pack()
+
+
+
+
+root.mainloop()
