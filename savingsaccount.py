@@ -8,6 +8,7 @@ from tkinter import ttk
 
 x = datetime.datetime.now()
 
+
 def prompt():
     print("\n\n\nWould you like to make a transaction, view your statement or check balance? \n t=transaction s=statement b=balance q=QUIT\n")
     transact = str(input())

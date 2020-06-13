@@ -10,8 +10,6 @@ import csv
 # import tkinter as tk
 # from tkinter import ttk
 
-# Define global variables
-x = datetime.datetime.now()
 
 #####
 #####
@@ -26,6 +24,7 @@ x = datetime.datetime.now()
 
 print("\n\n\nTHIS IS A BANKING APP PROTOTYPE")
 
+# Have user select bank account, Current account or Savings account
 def account():
     print("\n\n\nWould you like to make a changes to your current account or savings account? \n curr=Current save=Savings q=QUIT\n")
     transact = str(input())
@@ -36,21 +35,26 @@ def account():
 def startup(confirm):
     run = True
     while run:
+        # run current account file if user enters correct command
         if confirm == "curr" or confirm == "current":
             currentaccount.prompt()
+        # run savings account file if user enters correct command
         elif confirm == "save" or confirm == "savings":
             savingsaccount.prompt()
-            # line below for tkinter, however, it runs auto and skips the login step
+            # line below for tkinter, however, it runs automatically and skips the login step
             # savingsaccount.mainloop()
+        #  quit program if user enters quit command - "q" doesn't always work, unsure why "quit" is 100%
         elif confirm == "q" or confirm == "quit":
             print("Exiting...")
             sys.exit()
         else:
+            # if user inputs none of the above commands, give error message and reask question
             print("Input invalid")
             account()
 
 # LOGIN SYSTEM
 
+# read users from csv file
 def read_data():
     data = []
     # open and read data from csv file
@@ -62,7 +66,7 @@ def read_data():
     # return list of elements
     return data
 
-
+# check user input matches a user/pass in csv file
 def check_login(username, password, users):
     # cycle through rows to find username and password match
     for row in users:
