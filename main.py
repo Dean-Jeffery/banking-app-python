@@ -26,7 +26,7 @@ print("\n\n\nTHIS IS A BANKING APP PROTOTYPE")
 
 # Have user select bank account, Current account or Savings account
 def account():
-    print("\n\n\nWould you like to make a changes to your current account or savings account? \n curr=Current save=Savings q=QUIT\n")
+    print("\n\n\nWould you like to make a changes to your current account or savings account? \n curr=Current save=Savings quit=QUIT\n")
     transact = str(input())
     transact = transact.lower()
     startup(transact)

@@ -58,7 +58,7 @@ def checkBalance():
 
 def checkLog():
     file = open("Savings-TransactionLog.txt", "r")
-    print("Full transaction")
+    print("Full transaction log")
     print(file.read())
     current = open("Savings-TransactionLog.txt", "r").read()
     file.close()
